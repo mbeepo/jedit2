@@ -85,5 +85,6 @@ print(jedit2.load("file.json"))
 ```
 ##### Output
 ```BASH
->> {"key1": "value4", "key3": {"key4": ["value3"]
+>> {"key1": "value4", "key3": {"key4": ["value3"]}}
+>> {"key1": "value4", "key3": {"key4": []}}
 ```
