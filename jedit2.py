@@ -10,8 +10,6 @@ def _get_item(dic: dict, keys: list) -> dict:
 
 def _add_item(dic: dict, keys: list, value):
 	"""Add a value to a dict, adding keys if they dont exist."""
-	full_dict = dic
-
 	for key in keys[:-1]:
 		dic = dic.setdefault(key, {})
 
@@ -21,6 +19,11 @@ def _set_item(dic: dict, keys: list, value):
 	"""Set a value in a dict given the path of keys."""
 	dic = _get_item(dic, keys[:-1])
 	dic[keys[-1]] = value
+
+def _del_item(dic: dict, keys: list):
+	"""Remove a value in a dict given the path of keys."""
+	dic = _get_item(dic, keys[:-1])
+	del dic[keys[-1]]
 
 def add(keys: list, value, filename):
 	if len(keys) == 0:
@@ -56,9 +59,8 @@ def remove(keys: list, filename):
 		raise ValueError("keys cannot have a length of 0")
 
 	data = load(filename)
-	data = _get_item(data, keys[:-1])
-
-	del data[keys[-1]]
+	
+	_del_item(data, keys)
 	_dump(data, filename)
 
 def load(filename) -> dict:
