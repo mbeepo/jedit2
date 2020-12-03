@@ -44,7 +44,7 @@ print(data)
 jedit2.add(["key2"], "value2", "file.json")
 print(jedit2.load("file.json"))
 
-jedit2.add(["key3", "key4"], [], "file.json"
+jedit2.add(["key3", "key4"], [], "file.json")
 print(jedit2.load("file.json"))
 ```
 ##### Output
