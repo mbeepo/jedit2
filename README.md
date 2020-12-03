@@ -1,5 +1,5 @@
 # jedit2
-Second version of my Python module that makes it easier to use JSON modules. Now less esoteric!
+Second version of my Python module that makes it easier to use JSON files. Now less esoteric!
 
 ## Methods
 ### load(filename)
@@ -80,7 +80,7 @@ print(jedit2.load("file.json"))
 ```py
 jedit2.remove(["key2"], "file.json")
 print(jedit2.load("file.json"))
-jedit2.remove(["key3", "key4"])
+jedit2.remove(["key3", "key4", 0], "file.json)
 print(jedit2.load("file.json"))
 ```
 ##### Output
