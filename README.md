@@ -80,7 +80,7 @@ print(jedit2.load("file.json"))
 ```py
 jedit2.remove(["key2"], "file.json")
 print(jedit2.load("file.json"))
-jedit2.remove(["key3", "key4", 0], "file.json)
+jedit2.remove(["key3", "key4", 0], "file.json")
 print(jedit2.load("file.json"))
 ```
 ##### Output
