@@ -1,5 +1,5 @@
 # jedit2
-Second version of my Python module that makes it easier to use JSON files. Now less esoteric!
+Second version of my Python module that makes it easier to use JSON files.
 
 ## Methods
 ### load(filename)
